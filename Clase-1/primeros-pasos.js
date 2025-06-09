@@ -91,8 +91,8 @@ console.log("OR lógico:", or); // Imprime "OR lógico: true"
 console.log("NOT lógico:", not); // Imprime "NOT lógico: false"
 
 //Ejercicio practico (Qué numero es mayor?)
-let numero1 = 15;
-let numero2 = 16;
+let numero1 = 16;
+let numero2 = 17;
 
 if (numero1 > numero2) {
   console.log("El número 1 es mayor que el número 2");
