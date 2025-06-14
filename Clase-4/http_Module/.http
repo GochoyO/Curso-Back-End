@@ -1,0 +1,12 @@
+# GET http://localhost:3000/about
+
+ POST http://localhost:3000/contact
+ Content-Type: application/json
+
+ {
+     "nombre": "Juan",
+     "edad": "23",
+     "Numero": "5544332211"
+ }
+
+#GET http://localhost:3000/contenido

@@ -1,0 +1,9 @@
+# get http://localhost:3000/
+
+POST http://localhost:3000/contact
+
+Content-Type: application/json
+{
+    "nombre": "Juan",
+    "edad": "23"
+}
