@@ -66,34 +66,59 @@ app.post("/productos", async (req, res) => {
 
 //
 //UPDATE (PUT) de nuestro CRUD
-app.post("/productos", async (req, res) => {
+
+
+app.put("/productos/:id", async (req, res) => {
+
+   const id = parseInt(req.params.id);     //capturo el parametro que se esta enviando en la url y  lo convertimos en un numero entero con "ParseInt"
+   const index = productos.findIndex((p) => p.id === id); //buscamos la posicion el producto en el arreglo,  devuelve -1
+  
   try {
-    const nuevoProducto = req.body;
-    if (!nuevoProducto.nombre && !nuevoProducto.precio) {
+    const actualizaProducto = req.body;
+    if (!actualizaProducto.nombre && !actualizaProducto.precio) {
       return res.status(400).send("Datos son invalidos");
     }
-
-    nuevoProducto.id = Date.now(); // un identificador simpe unico
-    const producto = await fsPromises.readFile(
+      const producto = await fsPromises.putFile(
       path.join(__dirname, "datos.json"),
       "utf-8"
     );
     const productoJson = JSON.parse(producto);
 
-    productoJson.push(nuevoProducto);
+    productoJson.put(actualizaProducto);
 
-    await fsPromises.putFile(
+    /**await fsPromises.putFile(
       path.join(__dirname, "datos.json"),
       JSON.stringify(productoJson, null, 2)
-    );
+    );*/
 
-    res.status(201).send("El producto se agrego correctamente");
-    console.log(`Se agrego el producto ${nuevoProducto}`);
+    res.status(201).send("El producto se actualizo correctamente");
+    console.log(`Se actualizo el producto ${actualizaProducto}`);
   } catch (err) {
-    console.log(`Ocurrio un error al escribir el archivo ${err}`);
+    console.log(`Ocurrio un error al intentar actualizar el archivo ${err}`);
     res.status(500).send("Error interno del servidor");
   }
 });
+//
+//Eliminar (DELETE) de nuestro CRUD
+app.delete("/productos/:id", async (req, res) => {
+  const id = parseInt(req.params.id);     //capturo el parametro que se esta eniando en la url
+  const index = productos.findIndex((p) => p.id === id); //buscamoslaposicion el producto en el arreglo, devuelve -1
+  
+  try {
+    const data = await fsPromises.readFile(
+      path.join(__dirname, "datos.json"),
+      "utf-8"
+    );
+    const datajson = JSON.parse(data);
+
+    res.json(datajson);
+  } catch (err) {
+    console.log(`Error al leer el archivo ${err}`);
+    res.status(500).json({ mensajeError: "Error interno del servidor" });
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log(`El server se ejecuta en http://localhost:${PORT}`);
 });

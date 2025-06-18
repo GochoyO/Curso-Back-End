@@ -10,10 +10,21 @@ Content-Type: application/json
     "precio": 2000
 }
 
-###Actualizar un nuevo producto
+
+###Crear otro producto
 POST http://localhost:3000/productos
 Content-Type: application/json
 
 {
-        "precio": 8900
+    "nombre": "Samsung Note 25",
+    "precio": 33000
+}
+
+
+###Actualizar un nuevo producto
+PUT http://localhost:3000/productos/1750271502211
+Content-Type: application/json
+
+{
+        "precio": 31500
 }

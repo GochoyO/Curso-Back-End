@@ -73,5 +73,10 @@
     "nombre": "Samsung Galaxy S55",
     "precio": 2000,
     "id": 101
+  },
+  {
+    "nombre": "Samsung Note 25",
+    "precio": 33000,
+    "id": 1750271502211
   }
 ]

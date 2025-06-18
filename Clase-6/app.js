@@ -70,14 +70,13 @@ app.put("/productos/:id", async (req, res) => {
 app.delete("/productos/:id", async (req, res) => {
   try {
     const productoEliminar = await Producto.findByIdAndDelete(
-      req.params.id,
-      req.body
-    ); // Buscar el producto por ID y lo elimina con el id
-    // Si no se encuentra el producto, findByIdAndDelete devuelve null
-    if (!productoEliminado) {
+      req.params.id
+    ); // Buscar el producto por ID y lo elimina. Si no se encuentra el producto, findByIdAndDelete devuelve null
+  
+    if (!productoEliminar) {
       res.status(404).json({ error: "producto no encontrado" });
     }
-    res.json(productoEliminado); // Responder con el producto eliminado ok
+  res.json({ mensaje: "Producto borrado con exito", productoEliminar }); // Responder con un mensaje de éxito y el elemento eliminado
   } catch (err) {
     res.status(400).json({ mensaje: "error al elminar producto" });
   }
