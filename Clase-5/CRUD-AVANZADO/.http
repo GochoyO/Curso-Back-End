@@ -1,0 +1,19 @@
+###Obtener productos (GET)
+GET http://localhost:3000/productos
+
+###Crear un nuevo producto
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Samsung Galaxy S25",
+    "precio": 2000
+}
+
+###Actualizar un nuevo producto
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+        "precio": 8900
+}

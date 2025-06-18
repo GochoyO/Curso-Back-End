@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Dell Inspiron",
+    "precio": 850.99,
+    "categoria": "Computadoras"
+  },
+  {
+    "id": 2,
+    "nombre": "Smartphone Samsung Galaxy S23",
+    "precio": 999.99,
+    "categoria": "Teléfonos"
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Sony WH-1000XM4",
+    "precio": 299.99,
+    "categoria": "Accesorios"
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor LG UltraWide 34",
+    "precio": 599.99,
+    "categoria": "Monitores"
+  },
+  {
+    "id": 5,
+    "nombre": "Teclado mecánico Razer BlackWidow",
+    "precio": 129.99,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 6,
+    "nombre": "Ratón Logitech MX Master 3",
+    "precio": 99.99,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 7,
+    "nombre": "Impresora HP LaserJet Pro",
+    "precio": 199.99,
+    "categoria": "Impresoras"
+  },
+  {
+    "id": 8,
+    "nombre": "Cámara Canon EOS M50",
+    "precio": 749.99,
+    "categoria": "Cámaras"
+  },
+  {
+    "id": 9,
+    "nombre": "Disco duro externo Seagate 2TB",
+    "precio": 89.99,
+    "categoria": "Almacenamiento"
+  },
+  {
+    "id": 10,
+    "nombre": "Router Wi-Fi TP-Link Archer AX50",
+    "precio": 129.99,
+    "categoria": "Redes"
+  },
+  {
+    "nombre": "Samsung Galaxy S23",
+    "precio": 1000,
+    "id": 1749875834901
+  },
+  {
+    "nombre": "Samsung Galaxy S25",
+    "precio": 2000,
+    "id": 1749875961446
+  },
+  {
+    "nombre": "Samsung Galaxy S55",
+    "precio": 2000,
+    "id": 101
+  }
+]

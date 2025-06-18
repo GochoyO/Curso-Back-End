@@ -1,0 +1,24 @@
+###Obtener productos
+get http://localhost:3000/productos
+
+###Crear Productos
+
+post http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Laptop",
+    "precio": "2000"
+}
+
+###Modificar productos
+put http://localhost:3000/productos/2
+Content-Type: application/json
+
+{
+    "nombre": "Laptop Dell",
+    "precio": 6800
+}
+
+###Eliminar un elemento
+DELETE http://localhost:3000/productos/2

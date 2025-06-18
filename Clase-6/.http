@@ -1,0 +1,56 @@
+### Get obtener los datos de mi DB
+get http://localhost:3000/productos
+
+###POST para crear primer producto en mi base de datos
+post http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Samsung Galaxy s23",
+    "precio": "1000",
+    "descripcion": "Es un telefono de samsung de ultima generación"
+}
+
+
+###POST para crear segundo producto en mi base de datos
+post http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Portátil Inspiron 14",
+    "precio": "8300",
+    "descripcion": "Qualcomm® Snapdragon® X X1-26-100. Windows 11 Home. Gráficos Qualcomm® Adreno™. 16 GB LPDDR5X. SSD de 512 GB.14,0 pulgadas, sin función táctil, FHD+"
+}
+
+
+###POST para crear tercer producto para eliminar
+post http://localhost:3000/productos
+Content-Type: application/json
+
+{
+    "nombre": "Laptop Apple MacBook Air 2022 con chip M2",
+    "precio": "16400",
+    "descripcion": "con chip M2 (13.6 pulgadas, 8 GB de RAM, almacenamiento SSD de 512 GB), medianoche (renovado)"
+}
+
+
+###PUT para actualizar un elemento
+put http://localhost:3000/productos/6852eee5a72a47ccb29454a5
+Content-Type: application/json
+
+{
+    "precio": 11999
+}
+
+###segundo put
+put http://localhost:3000/productos/6852ee14a72a47ccb29454a2
+Content-Type: application/json
+
+{
+    "precio": 599
+}
+
+
+###Eliminar un producto
+DELETE http://localhost:3000/productos/6852f2ba294d987a052d0743
+
