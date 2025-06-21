@@ -1,0 +1,36 @@
+### Obtener todos los productos
+get http://localhost:3000/productos/
+
+### Obtener producto por Id
+get http://localhost:3000/productos/6855ee59faa2f08879a32671
+
+### Crear un producto 1
+post http://localhost:3000/productos/
+Content-Type: application/json
+
+{
+  "nombre": "Fosforera carupanera",
+  "precio": 45,
+  "descripcion": "Lo llaman el destructor...bailarin y puro amor"
+}
+### Crear un producto 2
+post http://localhost:3000/productos/
+Content-Type: application/json
+
+{
+  "nombre": "Coctel Matapasiones",
+  "precio": 69,
+  "descripcion": "Con chipichipi, calamr, pulpo,camaron y caracol"
+}
+
+### Actualizar un producto
+put http://localhost:3000/productos/6855eec0faa2f08879a32674
+Content-Type: application/json
+
+{
+ 
+  "precio": 120
+}
+
+### Eliminar un producto
+delete http://localhost:3000/productos/1
